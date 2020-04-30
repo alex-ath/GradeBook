@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ashleigh\\gradebook\\src\\Gradebook\\Gradebook.csproj": {}
+    "C:\\Users\\Ashleigh\\gradebook\\src\\GradeBook\\Gradebook.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ashleigh\\gradebook\\src\\Gradebook\\Gradebook.csproj": {
+    "C:\\Users\\Ashleigh\\gradebook\\src\\GradeBook\\Gradebook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ashleigh\\gradebook\\src\\Gradebook\\Gradebook.csproj",
+        "projectUniqueName": "C:\\Users\\Ashleigh\\gradebook\\src\\GradeBook\\Gradebook.csproj",
         "projectName": "Gradebook",
-        "projectPath": "C:\\Users\\Ashleigh\\gradebook\\src\\Gradebook\\Gradebook.csproj",
+        "projectPath": "C:\\Users\\Ashleigh\\gradebook\\src\\GradeBook\\Gradebook.csproj",
         "packagesPath": "C:\\Users\\Ashleigh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ashleigh\\gradebook\\src\\Gradebook\\obj\\",
+        "outputPath": "C:\\Users\\Ashleigh\\gradebook\\src\\GradeBook\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ashleigh\\AppData\\Roaming\\NuGet\\NuGet.Config",
