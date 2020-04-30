@@ -17,6 +17,7 @@ namespace GradeBook
             Console.WriteLine($"The average grade of {book.Name} is {stats.Average:N1}");
             Console.WriteLine($"The highest grade of {book.Name} is {stats.High:N1}");
             Console.WriteLine($"The lowest grade of {book.Name} is {stats.Low:N1}");                      
+            Console.WriteLine($"The letter Grade is {stats.Letter}");
         }
     }
 }
