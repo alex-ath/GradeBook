@@ -32,7 +32,8 @@ namespace GradeBook.Tests
            //act
            book.AddGrade(105);
 
-           //assert
+           //assert (Instead of checking a valid/invalid entry, 
+           //we ensure there was no entry for an invalid grade)
            Assert.Empty(book.Grades);
         }
     }
