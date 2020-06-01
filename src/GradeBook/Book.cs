@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace GradeBook
 {
+    public delegate void GradeAddedDelegate(object sender, EventArgs args);
+
     public class Book
     {
         public Book(string name)
@@ -11,8 +13,7 @@ namespace GradeBook
            Name = name;          
         }
 
-        /* Simple Switch statement
-        public void AddLetterGrade(char letter)
+        public void AddGrade(char letter)
         {
             
             switch(letter)
@@ -33,18 +34,25 @@ namespace GradeBook
                     AddGrade(0);
                     break;
             }
-        } */
+        }
+
         public void AddGrade(double grade)
             {
                 if (grade <= 100 && grade >= 0)
                 {
                    Grades.Add(grade);
+                   if (GradeAdded != null)
+                   {
+                       GradeAdded(this, new EventArgs());
+                   }
                 }
                 else
                 {
                     throw new ArgumentException($"Invalid {nameof(grade)}");
                 }
             }
+
+        public event GradeAddedDelegate GradeAdded;
         public Statistics GetStatistics()
         {
             var result = new Statistics();
@@ -109,7 +117,35 @@ namespace GradeBook
             
             return result;
         }
-        public List<double> Grades;   
-        public string Name;
+        private List<double> grades; 
+
+        public List<double> Grades 
+        {
+            get
+            {
+                return grades;
+            }
+            set
+            {
+                grades = value;
+            }
+        } 
+
+        public string Name
+        {
+            get; 
+            set; /* You can have it as private with 'private set;' */
+        }
+
+        /* "Readonly" members can only be written to in the constructor or 
+        variable initializer
+
+        readonly string category = "Science";
+        */
+
+        /* "Const" members can have the 'public' attribute(just for read only) 
+        and it's a usual practice to have the name written in uppercase*/
+
+        public const string CATEGORY = "Science";
     }
 }
