@@ -5,9 +5,23 @@ namespace GradeBook
 {
     public delegate void GradeAddedDelegate(object sender, EventArgs args);
 
-    public class Book
+    public class NamedObject
     {
-        public Book(string name)
+        public NamedObject(string name)
+        {
+            Name = name;
+        }
+
+        public string Name
+        {
+            get;
+            set;
+        }
+    }
+
+    public class Book : NamedObject
+    {
+        public Book(string name) : base(name)
         {
            Grades = new List<double>();
            Name = name;          
@@ -131,10 +145,11 @@ namespace GradeBook
             }
         } 
 
+        /* Has been addressed above
         public string Name
         {
             get; 
-            set; /* You can have it as private with 'private set;' */
+            set; / You can have it as private with 'private set;' 
         }
 
         /* "Readonly" members can only be written to in the constructor or 

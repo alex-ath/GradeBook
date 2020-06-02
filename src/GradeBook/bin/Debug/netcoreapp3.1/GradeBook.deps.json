@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Gradebook/1.0.0": {
+      "GradeBook/1.0.0": {
         "runtime": {
-          "Gradebook.dll": {}
+          "GradeBook.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Gradebook/1.0.0": {
+    "GradeBook/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
